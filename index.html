@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snap Judgement</title>
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1 class="studio-name">ChillVibez Studios</h1>
+            <h2 id="game-title">Snap Judgement</h2>
+            <p id="stats">Cards Remaining: <span id="card-count">300</span></p>
+        </header>
+
+        <main>
+            <div id="card-area">
+                <div class="card" id="main-card">
+                    <div class="card-inner">
+                        <div class="card-back">
+                            <!-- Image will be set via CSS background -->
+                        </div>
+                        <div class="card-front">
+                            <div class="card-header">
+                                <span class="card-type" id="card-category">CATEGORY</span>
+                                <span class="card-id" id="card-number">#000</span>
+                            </div>
+                            <div class="card-illustration">
+                                <span id="card-emoji">🃏</span>
+                            </div>
+                            <div class="content-wrapper">
+                                <p id="card-text">Click to draw a card!</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="stat-box">
+                                    <span class="stat-label">AWKWARDNESS</span>
+                                    <div class="stat-bar"><div class="stat-fill" id="stat-awkward"></div></div>
+                                </div>
+                                <p class="disclaimer">© 2026 ChillVibez Studios | Created by Ethan Tyler Bonser & Tim Jacobson</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <button id="shuffle-btn">Shuffle Deck</button>
+        </footer>
+    </div>
+
+    <script src="cards.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

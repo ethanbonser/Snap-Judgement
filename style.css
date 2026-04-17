@@ -1,0 +1,254 @@
+:root {
+    --bg-color: #1a1a1a;
+    --accent-color: #4a90e2;
+    --card-bg: #2d2d2d;
+    --text-main: #eeeeee;
+    --text-dim: #aaaaaa;
+    --border-color: #444444;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1a1a1a);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: var(--text-main);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 0;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.card:active {
+    transform: scale(0.98);
+}
+
+.game-container {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.studio-name {
+    font-size: 1rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+#game-title {
+    font-size: 2.5rem;
+    color: var(--text-main);
+    margin-bottom: 5px;
+    letter-spacing: -1px;
+}
+
+header p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+main {
+    margin: 30px 0;
+}
+
+#card-area {
+    perspective: 1200px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.card {
+    width: 300px;
+    aspect-ratio: 2 / 3;
+    max-width: 85vw;
+    max-height: 75vh;
+    cursor: pointer;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card.flipped .card-inner {
+    transform: rotateX(180deg);
+}
+
+/* Shuffle Animation */
+@keyframes shuffleEffect {
+    0% { transform: translate(0, 0) rotate(0) scale(1); }
+    20% { transform: translate(-80px, -20px) rotate(-15deg) scale(1.05); }
+    40% { transform: translate(80px, 20px) rotate(15deg) scale(0.95); }
+    60% { transform: translate(-60px, 40px) rotate(-10deg) scale(1.1); }
+    80% { transform: translate(60px, -40px) rotate(10deg) scale(0.9); }
+    100% { transform: translate(0, 0) rotate(0) scale(1); }
+}
+
+.shuffling {
+    animation: shuffleEffect 0.4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .card {
+        width: 80vw;
+    }
+    
+    #card-text {
+        font-size: 1rem;
+    }
+}
+
+.card-back, .card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.card-back {
+    background: #000 url('Images/Snap%20Judgement%20Back%20Card.jpg') center/contain no-repeat;
+}
+
+.card-front {
+    background: var(--card-bg);
+    transform: rotateX(180deg);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+}
+
+.card-illustration {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    background: rgba(0,0,0,0.2);
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.content-wrapper {
+    background: rgba(255,255,255,0.03);
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+#card-text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--text-main);
+    text-align: center;
+}
+
+.card-footer {
+    width: 100%;
+    border-top: 1px solid var(--border-color);
+    padding-top: 12px;
+}
+
+.stat-box {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.stat-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 2px;
+}
+
+.stat-fill {
+    height: 100%;
+    background: var(--accent-color);
+    border-radius: 2px;
+    transition: width 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.disclaimer {
+    font-size: 0.55rem;
+    color: var(--text-dim);
+    opacity: 0.5;
+}
+
+footer {
+    margin-top: 10px;
+}
+
+#shuffle-btn {
+    background: var(--accent-color);
+    border: none;
+    color: white;
+    padding: 12px 32px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+#shuffle-btn:hover {
+    opacity: 0.9;
+}
+
+#shuffle-btn:active {
+    transform: translateY(1px);
+}
