@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snap Judgement | Game Board</title>
+    <link rel="stylesheet" href="style.css?v=3">
+    <style>
+        .board-layout {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100vw;
+            height: 80vh;
+        }
+        .pile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .pile-label {
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-color);
+        }
+        #library-card {
+            transition: transform 0.5s ease-in-out;
+        }
+        .flying {
+            position: absolute;
+            z-index: 100;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1 class="studio-name">ChillVibez Studios</h1>
+            <h2 id="game-title">Game Board</h2>
+            <div id="room-info" style="color: var(--text-dim); margin-top: 10px;">
+                Room ID: <span id="room-id" style="color: var(--accent-color); font-weight: bold;">CHILL-1</span>
+            </div>
+        </header>
+
+        <main class="board-layout">
+            <!-- Library / Deck -->
+            <div class="pile-container">
+                <span class="pile-label">Library</span>
+                <div class="card" id="library-card">
+                    <div class="card-inner">
+                        <div class="card-back"></div>
+                    </div>
+                </div>
+                <p id="stats"><span id="card-count">600</span> Cards Left</p>
+            </div>
+
+            <!-- Discard Pile -->
+            <div class="pile-container">
+                <span class="pile-label">Discard Pile</span>
+                <div class="card" id="discard-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-header">
+                                <span class="card-type" id="card-category">WAITING...</span>
+                                <span class="card-id" id="card-number">#000</span>
+                            </div>
+                            <div class="card-illustration">
+                                <span id="card-emoji">💤</span>
+                            </div>
+                            <div class="content-wrapper">
+                                <p id="card-text">Send a card from your phone!</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="stat-box">
+                                    <span class="stat-label">AWKWARDNESS</span>
+                                    <div class="stat-bar"><div class="stat-fill" id="stat-awkward" style="width: 0%"></div></div>
+                                </div>
+                                <p class="disclaimer">Created by Ethan Tyler Bonser & Tim Jacobson</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <button id="shuffle-btn">Reset Board</button>
+        </footer>
+    </div>
+
+    <script src="cards.js"></script>
+    <!-- Firebase for wireless sync -->
+    <script type="module" src="sync-board.js"></script>
+</body>
+</html>
