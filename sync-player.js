@@ -2,19 +2,15 @@ const client = mqtt.connect('wss://broker.emqx.io:8084/mqtt');
 const topic = 'chillvibez/snap-judgement/CHILL-1';
 
 // Elements
-const mainCard = document.getElementById('main-card');
+const playerHand = document.getElementById('player-hand');
+const focusOverlay = document.getElementById('focus-overlay');
+const focusedCardSlot = document.getElementById('focused-card-slot');
 const sendBtn = document.getElementById('send-to-pile-btn');
-const statusMsg = document.getElementById('status-msg');
+const closeBtn = document.getElementById('close-focus-btn');
 const playerRole = document.getElementById('player-role');
 
-const cardText = document.getElementById('card-text');
-const cardCategory = document.getElementById('card-category');
-const cardNumber = document.getElementById('card-number');
-const cardEmoji = document.getElementById('card-emoji');
-const statFill = document.getElementById('stat-awkward');
-
-let currentSelectedCard = null;
-let isFlipping = false;
+let hand = [];
+let focusedCardData = null;
 
 // Series Data
 const seriesThemes = [
@@ -31,61 +27,107 @@ const seriesThemes = [
 ];
 
 client.on('connect', () => {
-    console.log('Player Connected Wirelessly!');
+    console.log('Player Connected!');
     client.subscribe(topic);
 });
 
 client.on('message', (t, message) => {
-    const data = JSON.parse(message.toString());
-    if (data.action === 'reset') {
-        location.reload();
-    }
+    if (JSON.parse(message.toString()).action === 'reset') location.reload();
 });
 
-mainCard.addEventListener('click', () => {
-    if (isFlipping) return;
-    isFlipping = true;
+// Logic
+function drawCard() {
+    const randomIndex = Math.floor(Math.random() * cardContexts.length);
+    const seriesIndex = Math.floor(randomIndex / 20);
+    const theme = seriesThemes[seriesIndex] || seriesThemes[seriesThemes.length - 1];
     
-    if (!mainCard.classList.contains('flipped')) {
-        const randomIndex = Math.floor(Math.random() * cardContexts.length);
-        const text = cardContexts[randomIndex];
-        const seriesIndex = Math.floor(randomIndex / 20);
-        const theme = seriesThemes[seriesIndex] || seriesThemes[seriesThemes.length - 1];
-        
-        currentSelectedCard = {
-            text: text,
-            number: randomIndex + 1,
-            category: theme.name,
-            emoji: theme.emoji,
-            awkwardness: Math.floor(Math.random() * 60) + 40,
-            player: playerRole.value === 'p1' ? 'Player 1' : 'Player 2'
-        };
+    return {
+        id: Math.random().toString(36).substr(2, 9),
+        text: cardContexts[randomIndex],
+        number: randomIndex + 1,
+        category: theme.name,
+        emoji: theme.emoji,
+        awkwardness: Math.floor(Math.random() * 60) + 40
+    };
+}
 
-        cardText.textContent = currentSelectedCard.text;
-        cardCategory.textContent = currentSelectedCard.category;
-        cardNumber.textContent = `#${String(currentSelectedCard.number).padStart(3, '0')}`;
-        cardEmoji.textContent = currentSelectedCard.emoji;
-        statFill.style.width = `${currentSelectedCard.awkwardness}%`;
-        
-        mainCard.classList.add('flipped');
-        sendBtn.disabled = false;
-        statusMsg.textContent = "Ready to send!";
-    } else {
-        mainCard.classList.remove('flipped');
-        sendBtn.disabled = true;
+function initHand() {
+    for (let i = 0; i < 7; i++) {
+        hand.push(drawCard());
     }
+    renderHand();
+}
 
-    setTimeout(() => { isFlipping = false; }, 600);
-});
+function renderHand() {
+    playerHand.innerHTML = '';
+    hand.forEach((card, index) => {
+        const cardEl = document.createElement('div');
+        cardEl.className = 'card hand-card';
+        cardEl.style.zIndex = index;
+        
+        // Calculate Fan Rotation
+        const mid = 3;
+        const rotation = (index - mid) * 10;
+        cardEl.style.transform = `rotate(${rotation}deg) translateY(${Math.abs(index - mid) * 5}px)`;
 
-sendBtn.addEventListener('click', () => {
-    if (!currentSelectedCard) return;
-    statusMsg.textContent = "Sending...";
-    client.publish(topic, JSON.stringify({ action: 'play-card', card: currentSelectedCard }));
-    setTimeout(() => {
-        mainCard.classList.remove('flipped');
-        currentSelectedCard = null;
-        sendBtn.disabled = true;
-        statusMsg.textContent = "Card Sent! Draw again.";
-    }, 500);
-});
+        cardEl.innerHTML = `
+            <div class="card-inner">
+                <div class="card-back"></div>
+            </div>
+        `;
+        
+        cardEl.onclick = () => focusCard(card);
+        playerHand.appendChild(cardEl);
+    });
+}
+
+function focusCard(card) {
+    focusedCardData = card;
+    focusedCardSlot.innerHTML = `
+        <div class="card flipped">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="card-header">
+                        <span class="card-type">${card.category}</span>
+                        <span class="card-id">#${String(card.number).padStart(3, '0')}</span>
+                    </div>
+                    <div class="card-illustration">${card.emoji}</div>
+                    <div class="content-wrapper"><p id="card-text">${card.text}</p></div>
+                    <div class="card-footer">
+                        <div class="stat-bar"><div class="stat-fill" style="width: ${card.awkwardness}%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    focusOverlay.style.display = 'flex';
+}
+
+closeBtn.onclick = () => {
+    focusOverlay.style.display = 'none';
+    focusedCardData = null;
+};
+
+sendBtn.onclick = () => {
+    if (!focusedCardData) return;
+    
+    const payload = {
+        action: 'play-card',
+        card: {
+            ...focusedCardData,
+            player: playerRole.value === 'p1' ? 'Player 1' : 'Player 2'
+        }
+    };
+
+    client.publish(topic, JSON.stringify(payload));
+    
+    // Remove from hand and draw new
+    hand = hand.filter(c => c.id !== focusedCardData.id);
+    hand.push(drawCard());
+    
+    focusOverlay.style.display = 'none';
+    focusedCardData = null;
+    renderHand();
+};
+
+initHand();
