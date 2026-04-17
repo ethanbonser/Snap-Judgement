@@ -1,6 +1,4 @@
-import { connect } from 'https://unpkg.com/mqtt@5.10.1/dist/mqtt.min.js';
-
-const client = connect('wss://broker.emqx.io:8084/mqtt');
+const client = mqtt.connect('wss://broker.emqx.io:8084/mqtt');
 const topic = 'chillvibez/snap-judgement/CHILL-1';
 
 // Elements
@@ -18,7 +16,7 @@ const statFill = document.getElementById('stat-awkward');
 let currentSelectedCard = null;
 let isFlipping = false;
 
-// Series Data (Same as script.js)
+// Series Data
 const seriesThemes = [
     { name: "COSMIC", emoji: "🌌" }, { name: "ANIMALS", emoji: "🐾" }, { name: "OBJECTS", emoji: "📦" },
     { name: "RANDOM", emoji: "🎲" }, { name: "CHAOTIC", emoji: "🔥" }, { name: "CAREER", emoji: "💼" },
@@ -44,14 +42,11 @@ client.on('message', (t, message) => {
     }
 });
 
-// Pick a card on phone
 mainCard.addEventListener('click', () => {
     if (isFlipping) return;
-    
     isFlipping = true;
     
     if (!mainCard.classList.contains('flipped')) {
-        // Draw random
         const randomIndex = Math.floor(Math.random() * cardContexts.length);
         const text = cardContexts[randomIndex];
         const seriesIndex = Math.floor(randomIndex / 20);
@@ -66,7 +61,6 @@ mainCard.addEventListener('click', () => {
             player: playerRole.value === 'p1' ? 'Player 1' : 'Player 2'
         };
 
-        // UI Update
         cardText.textContent = currentSelectedCard.text;
         cardCategory.textContent = currentSelectedCard.category;
         cardNumber.textContent = `#${String(currentSelectedCard.number).padStart(3, '0')}`;
@@ -84,17 +78,10 @@ mainCard.addEventListener('click', () => {
     setTimeout(() => { isFlipping = false; }, 600);
 });
 
-// Wireless Send
 sendBtn.addEventListener('click', () => {
     if (!currentSelectedCard) return;
-
     statusMsg.textContent = "Sending...";
-    
-    client.publish(topic, JSON.stringify({
-        action: 'play-card',
-        card: currentSelectedCard
-    }));
-
+    client.publish(topic, JSON.stringify({ action: 'play-card', card: currentSelectedCard }));
     setTimeout(() => {
         mainCard.classList.remove('flipped');
         currentSelectedCard = null;

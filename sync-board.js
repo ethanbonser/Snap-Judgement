@@ -1,7 +1,4 @@
-// Note: Using a lightweight PubSub library via CDN for wireless sync
-import { connect } from 'https://unpkg.com/mqtt@5.10.1/dist/mqtt.min.js';
-
-const client = connect('wss://broker.emqx.io:8084/mqtt');
+const client = mqtt.connect('wss://broker.emqx.io:8084/mqtt');
 const topic = 'chillvibez/snap-judgement/CHILL-1';
 
 // Elements
@@ -58,12 +55,6 @@ function revealCardOnBoard(cardData) {
         cardCountDisplay.textContent = cardsLeft;
     }, 300);
 }
-
-// Manual Board Interaction (If mouse is used on board)
-libraryCard.addEventListener('click', () => {
-    // This could trigger a 'Draw' command to the players if needed
-    alert("Use your phone to pick and send a card!");
-});
 
 document.getElementById('shuffle-btn').addEventListener('click', () => {
     client.publish(topic, JSON.stringify({ action: 'reset' }));
