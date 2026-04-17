@@ -1,4 +1,4 @@
-# Snap Judgement: Card Contexts (300 Cards)
+# Snap Judgement: Card Contexts (600 Cards)
 
 ## Series 1: Cosmic & Paranormal
 1. A black hole that only swallows the "other" sock in the dryer.
@@ -329,3 +329,309 @@
 298. A rock-paper-scissors tournament with "the fate of the moon" on the line.
 299. A dragon who hoards "expired coupons" and "rejected screenplays."
 300. The final boss of a video game is just "you, but with a slightly larger hat."
+
+## Series 16: The Seagull Saga
+301. A seagull who is a food critic and only reviews stolen french fries.
+302. A seagull wearing a tiny captain's hat, convinced it owns the pier.
+303. A seagull that can only scream in "Auto-Tune."
+304. A seagull who is currently in a legal battle over a discarded taco.
+305. A seagull who thinks it’s an undercover pigeon.
+306. A seagull that only steals "gluten-free" snacks.
+307. A seagull who is a professional wedding crasher and steals the ring.
+308. A seagull that leads a secret underground "Boardwalk Mafia."
+309. A seagull who is terrified of the ocean and prefers public pools.
+310. A seagull that tries to "pay" for a hot dog with a shiny pebble.
+311. A seagull who is a world-class beatboxer.
+312. A seagull who thinks the "Keep Off" signs are actually personal invitations.
+313. A seagull that only flies in "perfect formation" with itself.
+314. A seagull who is a fashion icon for wearing a plastic six-pack ring as a necklace.
+315. A seagull that thinks it’s a parrot and keeps saying "Polly want a pretzel."
+316. A seagull who is a high-stakes negotiator for ice cream cones.
+317. A seagull that is currently "shadowing" a tourist to learn their habits.
+318. A seagull who is a "sovereign citizen" and doesn't believe in beach rules.
+319. A seagull that only poops on cars that aren't "parked correctly."
+320. A seagull who is a "wellness coach" for other birds.
+321. A seagull that is addicted to the "ASMR" sound of a chip bag opening.
+322. A seagull who is a "sentient alarm clock" that only goes off at 4:00 AM.
+323. A seagull who thinks it’s a "drone" and makes whirring noises.
+324. A seagull that is "gatekeeping" the best trash can in the city.
+325. A seagull who is a "professional lurker" behind sandcastles.
+326. A seagull that is "cosplaying" as an albatross.
+327. A seagull who is a "stand-up comedian" whose only joke is screaming.
+328. A seagull that is "offended" by the quality of your sandwich.
+329. A seagull who is a "secret admirer" of a specific lifeguard.
+330. A seagull that is "training" a squirrel to be its apprentice.
+331. A seagull who is a "landlord" for a specific section of the boardwalk.
+332. A seagull that only steals "spicy" chips to feel alive.
+333. A seagull who is a "retired pirate" with a tiny wooden leg.
+334. A seagull that thinks it’s a "diva" and won't fly for less than a full pizza.
+335. A seagull who is a "private investigator" for missing flip-flops.
+336. A seagull that is "practicing" its dive-bombing for the Olympics.
+337. A seagull who is a "ghostwriter" for bird-themed poetry.
+338. A seagull that is "obsessed" with the reflection in your sunglasses.
+339. A seagull who is a "bouncer" for a popular picnic spot.
+340. A seagull that is "judging" your lack of sunscreen.
+341. A seagull who is a "professional photobomber" for tourist selfies.
+342. A seagull that is "convinced" it can speak human but only says "MINE."
+343. A seagull who is a "survivalist" living off discarded churros.
+344. A seagull that is "trying out" for a role in a remake of "The Birds."
+345. A seagull who is a "personal shopper" for other gulls.
+346. A seagull that is "allergic" to fish and only eats nachos.
+347. A seagull who is a "tour guide" who only shows people where the trash is.
+348. A seagull that is "writing a blog" about the best beaches for theft.
+349. A seagull who is a "professional napper" on top of moving cars.
+350. A seagull that is "holding a grudge" against a specific toddler.
+351. A seagull who is a "yoga instructor" specializing in "The Perch."
+352. A seagull that is "distracted" by the shiny foil on a gum wrapper.
+353. A seagull who is a "hacker" who only wants to steal your Wi-Fi password.
+354. A seagull that is "convinced" it is the reincarnation of a sea captain.
+355. A seagull who is a "luxury travel agent" for migrating birds.
+356. A seagull that is "scared" of crabs and only lands on dry land.
+357. A seagull who is a "professional whistler" but only off-key.
+358. A seagull that is "protecting" a specific piece of driftwood.
+359. A seagull who is a "critic" of sandcastle architecture.
+360. A seagull that is "trying" to start a flash mob on the pier.
+361. A seagull who is a "detective" looking for the "Great French Fry Thief."
+362. A seagull that is "obsessed" with the sound of a soda can opening.
+363. A seagull who is a "bodyguard" for a very small child's lollipop.
+364. A seagull that is "learning" to surf on a piece of Styrofoam.
+365. A seagull who is a "fashionista" wearing a discarded mask as a cape.
+366. A seagull that is "waiting" for the perfect moment to steal your hat.
+367. A seagull who is a "historian" of the local boardwalk.
+368. A seagull that is "trying" to befriend a pelican for the perks.
+369. A seagull who is a "professional screeners" for horror movies.
+370. A seagull that is "convinced" your car is its long-lost mother.
+371. A seagull who is a "life coach" telling everyone to "just fly away."
+372. A seagull that is "disturbed" by the presence of a kite.
+373. A seagull who is a "stuntman" for high-speed pizza snatching.
+374. A seagull that is "judging" your choice of beach towel.
+375. A seagull who is a "poet" who only writes about "The Great Salt."
+376. A seagull that is "convinced" it is invisible when it closes its eyes.
+377. A seagull who is a "personal trainer" for overweight pigeons.
+378. A seagull that is "trying" to open a clamshell with a plastic fork.
+379. A seagull who is a "celebrity" in the world of birdwatching.
+380. A seagull that is "scared" of its own shadow on the sand.
+381. A seagull who is a "bouncer" at the local fish market.
+382. A seagull that is "obsessed" with the color neon orange.
+383. A seagull who is a "detective" investigating a missing donut.
+384. A seagull that is "trying" to hitch a ride on a ferry.
+385. A seagull who is a "motivational speaker" for birds with clipped wings.
+386. A seagull that is "distracted" by a laser pointer on the beach.
+387. A seagull who is a "professional heckler" at beach volleyball games.
+388. A seagull that is "convinced" it is a secret agent for the penguins.
+389. A seagull who is a "luxury real estate agent" for nesting spots.
+390. A seagull that is "trying" to mimic the sound of a jet engine.
+391. A seagull who is a "personal chef" for a very picky crow.
+392. A seagull that is "scared" of umbrellas and thinks they are giant flowers.
+393. A seagull who is a "professional collector" of bottle caps.
+394. A seagull that is "trying" to use a touchscreen with its beak.
+395. A seagull who is a "critic" of tourist fashion.
+396. A seagull that is "convinced" it can swim better than a dolphin.
+397. A seagull who is a "professional witness" for beach crimes.
+398. A seagull that is "obsessed" with the smell of sunblock.
+399. A seagull who is a "detective" looking for the "Legendary Golden Fry."
+400. A seagull that is "trying" to start its own religion based on "The Great Scoop."
+
+## Series 17: The Pony Parade
+401. A pony who thinks it’s a unicorn and wears a traffic cone on its head.
+402. A pony who is a professional "emotional support animal" for a grizzly bear.
+403. A pony that only gallops in "slow motion" for dramatic effect.
+404. A pony who is a high-stakes "Competitive Eater" of carrots.
+405. A pony who thinks it’s a "show dog" and tries to sit and stay.
+406. A pony that only responds to the name "Sir Trots-a-Lot."
+407. A pony who is a "fashionista" with a mane full of glitter and bows.
+408. A pony that is "convinced" it is a racehorse trapped in a tiny body.
+409. A pony who is a "professional escape artist" from petting zoos.
+410. A pony that only eats "organic, non-GMO" hay.
+411. A pony who is a "detective" specializing in missing sugar cubes.
+412. A pony who thinks it’s a "police horse" and tries to pull over cyclists.
+413. A pony that is "obsessed" with its own reflection in the water bucket.
+414. A pony who is a "yoga instructor" specializing in "The Grazing Pose."
+415. A pony that is "scared" of its own tail and tries to outrun it.
+416. A pony who is a "professional napper" in the middle of a parade.
+417. A pony that only listens to "smooth jazz" while being brushed.
+418. A pony who is a "luxury travel agent" for other barnyard animals.
+419. A pony that is "convinced" it can fly if it jumps high enough.
+420. A pony who is a "beauty blogger" specializing in hoof polish.
+421. A pony that is "addicted" to the sound of an apple being crunched.
+422. A pony who is a "professional photobomber" for wedding photos.
+423. A pony that thinks it’s a "mountain goat" and tries to climb trees.
+424. A pony who is a "bouncer" for the stable's VIP section.
+425. A pony that is "gatekeeping" the best patch of clover.
+426. A pony who is a "professional lurker" in the background of selfies.
+427. A pony that is "cosplaying" as a zebra with white paint.
+428. A pony who is a "standard comedian" whose only joke is "neigh-ing."
+429. A pony that is "offended" by the quality of its salt lick.
+430. A pony who is a "secret admirer" of a specific tractor.
+431. A pony that is "training" a goat to be its squire.
+432. A pony who is a "landlord" for the local barn.
+433. A pony that only gallops when "The Imperial March" is playing.
+434. A pony who is a "retired knight" with a tiny wooden shield.
+435. A pony that thinks it’s a "diva" and won't walk for less than a gold-plated carrot.
+436. A pony who is a "private investigator" for stolen horsehair.
+437. A pony that is "practicing" its dressage for the Olympics.
+438. A pony who is a "ghostwriter" for pony-themed romance novels.
+439. A pony that is "obsessed" with the sound of a zipper.
+440. A pony who is a "bouncer" at the local meadow.
+441. A pony that is "judging" your lack of riding boots.
+442. A pony who is a "professional photobomber" for kids' birthday parties.
+443. A pony that is "convinced" it can speak human but only says "HAY."
+444. A pony who is a "survivalist" living off stolen picnic baskets.
+445. A pony that is "trying out" for a role in a remake of "My Little Pony."
+446. A pony who is a "personal shopper" for other horses.
+447. A pony that is "allergic" to grass and only eats oat cookies.
+448. A pony who is a "tour guide" who only shows people where the apples are.
+449. A pony that is "writing a blog" about the best stables in the county.
+450. A pony who is a "professional napper" standing up.
+451. A pony that is "holding a grudge" against a specific donkey.
+452. A pony who is a "yoga instructor" specializing in "The Downward Horse."
+453. A pony that is "distracted" by the shiny buckles on a saddle.
+454. A pony who is a "hacker" who only wants to order more carrots online.
+455. A pony that is "convinced" it is the reincarnation of a war horse.
+456. A pony who is a "luxury travel agent" for trail rides.
+457. A pony that is "scared" of chickens and thinks they are tiny dinosaurs.
+458. A pony who is a "professional whistler" through its nostrils.
+459. A pony that is "protecting" a specific fence post.
+460. A pony who is a "critic" of stable architecture.
+461. A pony that is "trying" to start a flash mob in the pasture.
+462. A pony who is a "detective" looking for the "Great Hay Thief."
+463. A pony that is "obsessed" with the sound of a gate opening.
+464. A pony who is a "bodyguard" for a very small kitten.
+465. A pony that is "learning" to dance to country music.
+466. A pony who is a "fashionista" wearing a floral wreath as a crown.
+467. A pony that is "waiting" for the perfect moment to steal your apple.
+468. A pony who is a "historian" of the local farm.
+469. A pony that is "trying" to befriend a cow for the extra milk.
+470. A pony who is a "professional whinner" for dramatic movies.
+471. A pony that is "convinced" your truck is its long-lost father.
+472. A pony who is a "life coach" telling everyone to "just keep trotting."
+473. A pony that is "disturbed" by the presence of a balloon.
+474. A pony who is a "stuntman" for high-speed carrot snatching.
+475. A pony that is "judging" your choice of riding helmet.
+476. A pony who is a "poet" who only writes about "The Golden Oat."
+477. A pony that is "convinced" it is invisible when it stands perfectly still.
+478. A pony who is a "personal trainer" for lazy sheep.
+479. A pony that is "trying" to open a gate with its teeth.
+480. A pony who is a "celebrity" in the world of equestrian sports.
+481. A pony that is "scared" of its own shadow in the moonlight.
+482. A pony who is a "bouncer" at the local county fair.
+483. A pony that is "obsessed" with the color bright pink.
+484. A pony who is a "detective" investigating a missing horseshoe.
+485. A pony that is "trying" to hitch a ride on a trailer.
+486. A pony who is a "motivational speaker" for horses with stage fright.
+487. A pony that is "distracted" by a butterfly in the field.
+488. A pony who is a "professional heckler" at dressage competitions.
+489. A pony that is "convinced" it is a secret agent for the unicorns.
+490. A pony who is a "luxury real estate agent" for paddock spots.
+491. A pony that is "trying" to mimic the sound of a galloping herd.
+492. A pony who is a "personal chef" for a very picky pig.
+493. A pony that is "scared" of rain and thinks the sky is leaking.
+494. A pony who is a "professional collector" of ribbons.
+495. A pony that is "trying" to use a tablet with its nose.
+496. A pony who is a "critic" of farm fashion.
+497. A pony that is "convinced" it can run faster than a train.
+498. A pony who is a "professional witness" for barnyard disputes.
+499. A pony that is "obsessed" with the smell of peppermint.
+500. A pony who is a "detective" looking for the "Legendary Golden Carrot."
+
+## Series 18: The Ultimate Snap Judgement Mix
+501. A seagull who acts as a high-stakes negotiator for the last corner of a pizza crust.
+502. A sentient parking meter that accepts "genuine compliments" as a form of payment.
+503. A ghost who haunts your laundry room just to turn all your white socks slightly gray.
+504. A squirrel that is currently "auditing" your birdfeeder for possible tax evasion.
+505. A microwave that enters a "reflective state" and refuses to heat leftovers it finds "uninspiring."
+506. A seagull wearing a tiny headset, directing a fleet of pigeons like an air traffic controller.
+507. A smartphone that "deletes your ex's number" out of pure, unadulterated spite.
+508. A professional wrestler whose entire persona is based on being a "very polite accountant."
+509. A seagull that can only scream in perfectly pitched "Auto-Tune".
+510. A garden gnome that moves two inches closer every time you blink.
+511. A vacuum cleaner that is "going through a goth phase" and only sucks up black dust.
+512. A pony who thinks it’s a unicorn and wears a bright orange traffic cone on its head.
+513. A seagull who is a food critic and only reviews stolen french fries from tourists.
+514. A toaster that is "connected to the cloud" but only to argue with other toasters.
+515. A squirrel with a PhD in Theoretical Physics and a very small chalkboard.
+516. A spider that weaves "passive-aggressive Yelp reviews" into its web.
+517. A seagull who is a "sovereign citizen" and doesn't believe in local beach rules.
+518. A pony that only gallops in "slow motion" to make every entrance feel dramatic.
+519. A mirror that shows you 10% more muscular, but only if you are wearing a hat.
+520. A seagull that tries to "pay" for a boardwalk hot dog with a particularly shiny pebble.
+521. A laptop that "sighs" audibly every time you open a new browser tab.
+522. A penguin who is a high-stakes poker champion in the underground arctic.
+523. A seagull who is a professional wedding crasher and specifically targets the rings.
+524. A sentient block of cheddar cheese suffering from severe existential dread.
+525. A pony that is "convinced" it can fly if it just jumps high enough from a hill.
+526. A seagull that is "addicted" to the ASMR sound of a crinkling chip bag.
+527. A refrigerator that hides the healthy food whenever it senses you are sad.
+528. A seagull who is a "wellness coach" for other birds, teaching them how to "let go" of bread.
+529. A pony who is a "beauty blogger" specializing in high-gloss hoof polish.
+530. A seagull that is "gatekeeping" the best trash can in the city from other gulls.
+531. A mailbox that eats letters it finds "boring" and refuses to deliver them.
+532. A pony that only listens to "smooth jazz" while being brushed in the morning.
+533. A seagull who is a "stand-up comedian" whose entire set consists of screaming.
+534. A tube of toothpaste that is 90% attitude and only 10% actual mint.
+535. A seagull who is a "private investigator" for missing flip-flops on the shore.
+536. A pony who thinks it’s a "show dog" and tries to sit and stay for treats.
+537. A seagull that is "obsessed" with the reflection in your designer sunglasses.
+538. A calculator that refuses to do math it finds "too hard" or "unethical".
+539. A seagull who is a "professional photobomber" for every tourist selfie.
+540. A pony that is "scared" of its own tail and tries to outrun it daily.
+541. A seagull that is "writing a blog" about the best beach locations for theft.
+542. A chair that "judges your posture" by whispering "wow, okay" when you sit down.
+543. A seagull who is a "tour guide" who only shows people where the best trash is.
+544. A pony who is a "luxury travel agent" for other barnyard animals.
+545. A seagull that is "holding a grudge" against a specific toddler who dropped a fry.
+546. A ceiling fan that thinks it’s an "undercover agent" for the FBI.
+457. A seagull who is a "yoga instructor" specializing in "The Perch" pose.
+548. A pony that is "cosplaying" as a zebra using white house paint.
+549. A seagull that is "convinced" it is invisible as long as it closes its eyes.
+550. A toothbrush that is secretly recording a podcast about your dental hygiene.
+551. A seagull who is a "personal trainer" for overweight city pigeons.
+552. A pony that is "distracted" by the shiny buckles on a leather saddle.
+553. A seagull that is "trying" to start a flash mob on the pier during sunset.
+554. A remote control that "teleports" to the kitchen every time you look away.
+555. A seagull who is a "detective" looking for the "Legendary Golden Fry".
+556. A pony that is "convinced" your truck is actually its long-lost father.
+557. A seagull that is "learning" to surf on a discarded piece of Styrofoam.
+558. A pillow that "whispers spoilers" for the dream you are about to have.
+559. A seagull who is a "historian" of the local boardwalk's various snack shops.
+560. A pony who is a "professional napper" even during the middle of a parade.
+561. A seagull that is "convinced" it can speak human but only ever says "MINE".
+562. A car that runs entirely on "positive vibes" and very expensive gasoline.
+563. A seagull who is a "stuntman" for high-speed, precision pizza snatching.
+564. A pony that is "trying" to open a heavy gate with its teeth out of boredom.
+565. A seagull that is "judging" your lack of sunscreen on a very hot day.
+566. A lamp that only turns on when you tell it a secret you've never told anyone.
+567. A seagull who is a "poet" who only writes about the majesty of the "Great Salt".
+568. A pony who is a "life coach" telling everyone to "just keep trotting".
+569. A seagull that is "obsessed" with the sound of a soda can being opened.
+570. A world where the "National Anthem" is just five minutes of kazoo noises.
+571. A seagull who is a "bouncer" for a very popular picnic spot on the grass.
+572. A pony that is "scared" of chickens and thinks they are tiny dinosaurs.
+573. A seagull that is "convinced" it can swim much better than a dolphin.
+574. A GPS that gives you "life advice" instead of actual driving directions.
+575. A seagull who is a "professional collector" of colorful plastic bottle caps.
+576. A pony that is "obsessed" with the color bright pink for its accessories.
+577. A seagull that is "trying" to use a touchscreen phone with its beak.
+578. A motivational speaker who is just a "very loud, very angry cactus".
+579. A seagull who is a "luxury real estate agent" for prime nesting spots.
+580. A pony that is "trying" to hitch a ride on the back of a horse trailer.
+581. A seagull that is "scared" of umbrellas and thinks they are giant flowers.
+582. A knight in shining armor who is "allergic to metal" and wears cardboard.
+583. A seagull who is a "professional witness" for various beach-related crimes.
+584. A pony who is a "detective" investigating a missing horseshoe in the barn.
+585. A seagull that is "obsessed" with the smell of generic sunblock.
+586. A superhero whose only power is knowing exactly how many beans are in a jar.
+587. A seagull who is a "personal chef" for a very picky, high-maintenance crow.
+588. A pony that is "scared" of rain because it thinks the sky is leaking.
+589. A seagull that is "trying" to start its own religion based on "The Great Scoop".
+590. A zombie who is only interested in eating people who don't recycle.
+591. A seagull who is a "motivational speaker" for birds with clipped wings.
+592. A pony that is "distracted" by a single butterfly in the middle of a field.
+593. A seagull that is "convinced" your car is its long-lost biological mother.
+594. A heavy metal band made entirely of librarians screaming about late fees.
+595. A seagull who is a "critic" of the latest tourist beach fashions.
+596. A pony that is "convinced" it can run significantly faster than a train.
+597. A seagull that is "scared" of its own shadow on the wet sand.
+598. A volcano that erupts nothing but glitter and mild disappointment.
+599. A seagull who is a "professional heckler" at beach volleyball games.
+600. A pony who is a "detective" looking for the "Legendary Golden Carrot".

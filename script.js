@@ -24,7 +24,22 @@ const seriesThemes = [
     { name: "BIOLOGICAL", emoji: "🧬" },
     { name: "SURREAL", emoji: "🍄" },
     { name: "CAREER CHAOS", emoji: "⚠️" },
-    { name: "FINAL BOSS", emoji: "👑" }
+    { name: "FINAL BOSS", emoji: "👑" },
+    { name: "SEAGULLS", emoji: "🐦" },
+    { name: "SEAGULLS", emoji: "🍟" },
+    { name: "SEAGULLS", emoji: "🐚" },
+    { name: "SEAGULLS", emoji: "🌊" },
+    { name: "SEAGULLS", emoji: "🕶️" },
+    { name: "PONIES", emoji: "🐎" },
+    { name: "PONIES", emoji: "🥕" },
+    { name: "PONIES", emoji: "🏇" },
+    { name: "PONIES", emoji: "🎀" },
+    { name: "PONIES", emoji: "🍎" },
+    { name: "MIX", emoji: "🌀" },
+    { name: "MIX", emoji: "🌪️" },
+    { name: "MIX", emoji: "🔮" },
+    { name: "MIX", emoji: "🎭" },
+    { name: "MIX", emoji: "✨" }
 ];
 
 // Game State
