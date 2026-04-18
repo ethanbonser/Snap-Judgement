@@ -13,7 +13,16 @@ client.on('connect', () => {
 client.on('message', (t, m) => {
     try {
         const d = JSON.parse(m.toString());
-        if (d.a === 'h') { const el = document.getElementById(`${d.p}-status`); if (el) { el.textContent = 'ONLINE'; el.style.color = '#2ecc71'; } }
+        if (d.a === 'h') { 
+            const el = document.getElementById(`${d.p}-status`); 
+            if (el) { el.textContent = 'ONLINE'; el.style.color = '#2ecc71'; }
+            
+            // LATE JOINER FIX: If game is already started, tell the new joiner to deal their cards
+            const setupMenu = document.getElementById('setup-menu');
+            if (setupMenu && !setupMenu.classList.contains('active')) {
+                client.publish(topic, JSON.stringify({ a: 'start', pc: playerCount }));
+            }
+        }
         if (d.a === 'pc') handleCardPlay(d);
         if (d.a === 'sv') handleVote(d);
         if (d.a === 'reset') location.reload();
@@ -60,6 +69,8 @@ function initLayout() {
     const area = document.getElementById('main-board-area');
     if (!area) return;
     
+    area.style.gridTemplateColumns = "280px 1fr 280px"; // Ensure 3 columns
+    
     area.innerHTML = `
         <div class="side-area" id="left-side" style="display:flex; flex-direction:column; gap:30px;"></div>
         <div class="side-area" style="display:flex; flex-direction:column; align-items:center; justify-content:center;">
@@ -69,11 +80,46 @@ function initLayout() {
             </div>
             <button id="start-voting-btn" style="display:none; background:var(--gold); color:black; margin-top:15px;">START VOTING</button>
         </div>
-        <div class="side-area" id="right-side" style="display:flex; flex-direction:column; gap:30px;"></div>
+        <div class="side-area" id="right-side" style="display:flex; flex-direction:column; gap:30px;">
+            <div class="connection-box" id="qr-box">
+                <div class="join-label">JOIN GAME</div>
+                <div class="qr-container" id="qrcode"></div>
+                <div class="join-code">CHILL-153</div>
+            </div>
+        </div>
     `;
     
     const leftSide = document.getElementById('left-side');
     const rightSide = document.getElementById('right-side');
+
+    // Generate QR Code
+    let playerUrl = window.location.href.replace('board.html', 'player.html');
+    
+    // If running from file system, try to use the IP-based URL
+    if (window.location.protocol === 'file:') {
+        const ip = topic.split('/').pop().replace(/-/g, '.');
+        playerUrl = `http://${ip}:5500/player.html`;
+        console.log("Local file detected. QR points to: " + playerUrl);
+    }
+
+    // Clear existing QR if any
+    const qrContainer = document.getElementById("qrcode");
+    qrContainer.innerHTML = '';
+
+    new QRCode(qrContainer, {
+        text: playerUrl,
+        width: 130,
+        height: 130,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.M
+    });
+
+    // Add a clickable link below the QR for debugging/manual entry
+    const joinCodeDisplay = document.querySelector('.join-code');
+    if (joinCodeDisplay) {
+        joinCodeDisplay.innerHTML = `CODE: CHILL-153<br><a href="${playerUrl}" target="_blank" style="color:var(--gold); font-size:0.4rem; text-decoration:none; margin-top:5px; display:block;">${playerUrl}</a>`;
+    }
 
     for(let i=1; i<=playerCount; i++) {
         const col = i <= 2 ? leftSide : rightSide;
@@ -128,7 +174,15 @@ window.revealNewPrompt = function() {
 };
 
 function handleCardPlay(d) {
-    currentSubmissions.push(d);
+    // Check if this player already has a submission
+    const existingIndex = currentSubmissions.findIndex(s => s.p === d.p);
+    if (existingIndex !== -1) {
+        currentSubmissions[existingIndex] = d;
+        console.log(`Player ${d.p} changed their card.`);
+    } else {
+        currentSubmissions.push(d);
+    }
+
     const slot = document.getElementById(`${d.p}-submission`);
     if (slot) {
         slot.innerHTML = `<div class="card flipped" style="width:140px; height:210px;"><div class="card-inner"><div class="card-front">
