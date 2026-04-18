@@ -2,6 +2,18 @@
 
 All notable changes to the **Snap Judgment** project will be documented in this file.
 
+## [2.1.0] - 2026-04-17
+### Added
+- **Neon AR Connection System:** Added a high-contrast "Neon AR OS" connection box on the board with a dynamic QR code and 'CHILL-153' room code.
+- **Manual Room Entry:** Players can now manually enter room codes on the mobile controller for easier connectivity.
+- **Dynamic Card Swapping:** Implemented a 'return-to-hand' mechanic where replacing a submitted card returns the previous one to the player's hand.
+- **Visual Feedback:** Added 'CARD SENT! 🚀' and 'CARD UPDATED! 🔄' toast notifications for player submissions.
+- **Late-Joiner Sync:** The board now automatically re-sends game state and start signals to players who connect after a round has begun.
+
+### Changed
+- **Pyramid Hand Refinement:** Finalized the 1-2-4 grid structure for the player hand to ensure perfect vertical and horizontal centering.
+- **Focused View Optimization:** Redesigned the zoomed card overlay for better readability and cinematic presence.
+
 ## [2.0.0] - 2026-04-17
 ### Added
 - **Professional UI/UX Overhaul:** Complete redesign with a dark navy blue aesthetic and mathematically centered vertical alignment.
