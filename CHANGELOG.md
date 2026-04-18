@@ -1,26 +1,30 @@
 # Changelog
 
-All notable changes to the **Snap Judgement** project will be documented in this file.
+All notable changes to the **Snap Judgment** project will be documented in this file.
+
+## [2.0.0] - 2026-04-17
+### Added
+- **Professional UI/UX Overhaul:** Complete redesign with a dark navy blue aesthetic and mathematically centered vertical alignment.
+- **Symmetric Board Layout:** Implemented a balanced 3-column system with mirrored player zones and a central Library.
+- **Device-Specific Optimization:** Added 8 optimization paths for Android, iOS, Windows, Mac, and Linux to ensure perfect screen fitting.
+- **Pyramid Hand Layout:** Redesigned the player hand into a centered pyramid structure with staggered dealing animations.
+- **Round-Based Gameplay:** Added a full game loop including Setup, Round Prompts, Submission, Voting, and Victory phases.
+- **Visual Win Piles:** Implemented stacking miniature cards to visually track wins for each player on the board.
+- **Low-Latency Messaging:** Switched to a compressed MQTT payload format for nearly instantaneous wireless connectivity.
+
+### Fixed
+- **Collision & Cutoff Fixes:** Eliminated element overlapping and title cutoff issues using strict grid containers and `clamp()` typography.
+- **Initialization Bug:** Resolved the "stuck on initializing" error by wrapping logic in robust DOM lifecycle listeners.
+- **Button Logic Repair:** Fixed the "Begin Game," "Reset All," and "Library" buttons to ensure reliable round transitions.
+- **Persistence Stability:** Corrected LocalStorage handling to maintain player hands during refreshes or accidental disconnects.
 
 ## [1.2.0] - 2026-04-17
-### Added
-- **Animated Background:** Implemented a playful, slow-shifting mesh gradient using deep, cozy colors.
-- **Vertical Flip:** Changed the primary card interaction from horizontal to vertical (`rotateX`) for a more natural "flipping" feel on mobile.
-- **Unified Interaction:** Removed corner triggers in favor of a single, robust click-anywhere flip mechanic.
-- **Cache Control:** Added versioning to CSS imports to ensure instant updates in browsers.
+- **Animated Background:** Implemented a playful, slow-shifting mesh gradient.
+- **Vertical Flip:** Switched to vertical `rotateX` card mechanics for a natural mobile feel.
 
 ## [1.1.0] - 2026-04-17
-### Added
-- **ChillVibez Studios Branding:** Updated the game header and footer with new studio branding.
-- **Creator Credits:** Added official credits for Ethan Tyler Bonser and Tim Jacobson to every card front.
-- **Mobile Responsiveness:** Added media queries and touch-friendly scaling for phones and tablets.
-- **Touch Support:** Implemented `touch-action` and `user-select` protections to prevent zooming and text selection during gameplay.
-- **Shuffle Animation:** Added a high-energy 3D "shuffling" animation to provide visual feedback when the deck is reset.
+- **Branding:** Added ChillVibez Studios and creator credits for Ethan Tyler Bonser & Tim Jacobson.
+- **Mobile First:** Added media queries and touch-protection.
 
 ## [1.0.0] - 2026-04-17
-### Added
-- **Core Gameplay:** Initial release of the 3D card-flipping engine.
-- **Card Content:** Integrated 300 unique comedic contexts across 15 thematic series (Cosmic, Animals, Tech, etc.).
-- **Trading Card Design:** Implemented a structured card front featuring category names, unique IDs, and random "Awkwardness" stats.
-- **Asset Integration:** Successfully linked the physical "Snap Judgement Back Card.jpg" as the primary card backing.
-- **Persistence:** Created a logic-based deck management system to prevent duplicate draws until a shuffle occurs.
+- **Core Engine:** Initial release of the 3D card-flipping engine with 600 unique comedic contexts.

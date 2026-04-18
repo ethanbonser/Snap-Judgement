@@ -1,32 +1,38 @@
-# Snap Judgement (v1.2.0)
+# Snap Judgment (v2.0.0)
 
-A web-based card game of absurd contexts and quick reveals, built for **ChillVibez Studios**.
+A professional, cross-platform digital card game of absurd contexts and quick reveals. Built for **ChillVibez Studios**.
 
 ---
 
 ## 🎨 Aesthetic & Experience
-Snap Judgement features a **modern cozy aesthetic** with an animated mesh gradient background that shifts slowly to create a relaxed, engaging atmosphere. Every card is designed like a collectible trading card, complete with:
-- **Vertical 3D Flip Mechanics:** Smooth, top-to-bottom card reveals optimized for mobile viewports.
-- **Dynamic Series Themes:** 300 unique cards categorized into 15 thematic series (Cosmic, Paranormal, Animals, Tech, Food, etc.).
-- **Collectibility:** Each card includes its own unique ID, thematic emoji, and a randomized **"Awkwardness" Stat** that animates on reveal.
-- **Shuffle Physics:** A high-energy 3D shuffling animation for tactile feedback when resetting the 300-card deck.
+Snap Judgment features a **professional modern-retro UI** with a mathematically aligned layout and a deep navy-blue aesthetic. Every aspect is designed for high-contrast clarity and professional mathematical symmetry.
 
-## 📱 Features
-- **Mobile-First Design:** Fully responsive layout that scales to any screen size.
-- **Touch-Responsive Logic:** Optimized for touchscreens with selection-protection and anti-zoom properties.
-- **"Phygital" Ready:** Built with future support in mind for NFC-based card detection (requires Web NFC supported browser).
-- **Persistent Deck Management:** Tracks drawn cards to prevent duplicates until the deck is manually shuffled.
+### **Key Visual Features:**
+- **Premium TCG Template:** Ornate Dark Elf inspired card frames with metallic gold borders and parchment-style text scrolls.
+- **Symmetric Board Design:** A perfectly balanced 3-column layout where player zones flank the central Library.
+- **Animated Atmosphere:** Slowly shifting mesh gradient backgrounds and hardware-accelerated 3D card flips.
+- **Pixel Art Heritage:** Bold pixel-art typography and "choppy" retro animations for a classic arcade feel.
 
-## 🛠️ How to Play
-1. Open `index.html` in any modern web browser.
-2. **Click/Tap** the card to reveal its comedic context.
-3. **Click/Tap** the flipped card again to put it back face-down.
-4. Use the **Shuffle Deck** button to randomize and reset all 300 cards at any time.
+## 📱 Pro Mobile Controller
+The player side is optimized into a high-performance mobile controller:
+- **Device-Specific Optimization:** 8 distinct optimization paths for perfect fitting on **Android, iOS, and Desktop** browsers.
+- **Pyramid Hand Hand:** A centered 7-card pyramid structure with cinematic "flying" dealing animations.
+- **Large Thumb-Friendly UI:** Designed for one-handed play with massive, centered action buttons and large focused card views.
 
-## 👥 Credits
-- **Brand:** ChillVibez Studios
-- **Lead Developer:** Ethan Tyler Bonser
-- **Creative Director:** Tim Jacobson
+## 🎮 Game Features
+- **Wireless Sync:** Powered by a low-latency MQTT bridge for nearly instantaneous cross-device gameplay.
+- **Round-Based Logic:** Automated Setup Menu to choose players (2-4) and rounds (including **ZEN Mode**).
+- **Competitive Voting:** Integrated voting system where players choose the funniest submission each round.
+- **Visual Win Tracking:** Wins are displayed both numerically and visually with stacking miniature cards.
+- **Persistent States:** LocalStorage ensures your hand and role are saved during refreshes or disconnects.
+
+## 🛠️ Setup & Credits
+### **Lead Developers:**
+- **Ethan Tyler Bonser**
+- **Tim Jacobson**
+
+### **Company:**
+- **ChillVibez Studios**
 
 ---
 *© 2026 ChillVibez Studios. All rights reserved.*
