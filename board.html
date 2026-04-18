@@ -3,96 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snap Judgement | Game Board</title>
-    <link rel="stylesheet" href="style.css?v=3">
-    <style>
-        .board-layout {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            width: 100vw;
-            height: 80vh;
-        }
-        .pile-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        .pile-label {
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--accent-color);
-        }
-        #library-card {
-            transition: transform 0.5s ease-in-out;
-        }
-        .flying {
-            position: absolute;
-            z-index: 100;
-            pointer-events: none;
-        }
-    </style>
+    <title>Snap Judgment | Game Board</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@400;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=20">
 </head>
-<body>
-    <div class="game-container">
-        <header>
-            <h1 class="studio-name">ChillVibez Studios</h1>
-            <h2 id="game-title">Game Board</h2>
-            <div id="room-info" style="color: var(--text-dim); margin-top: 10px;">
-                Room ID: <span id="room-id" style="color: var(--accent-color); font-weight: bold;">CHILL-1</span>
+<body class="board-page">
+    <div id="setup-menu" class="overlay-screen active">
+        <div class="overlay-box">
+            <h1 style="font-family: Bangers; font-size: 3rem; color: var(--gold);">GAME SETUP</h1>
+            <div style="margin: 20px 0; text-align: left; font-family: Fredoka; font-size: 0.8rem; line-height: 1.5; color: var(--text-muted);">
+                <p>1. Library reveals a question.</p>
+                <p>2. Players submit the funniest answer.</p>
+                <p>3. Vote for the winner!</p>
             </div>
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <select id="setup-players"><option value="2">2 PLAYERS</option><option value="3">3 PLAYERS</option><option value="4">4 PLAYERS</option></select>
+                <button id="start-game-btn" class="btn-green">BEGIN GAME</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="winner-modal" class="overlay-screen">
+        <div class="overlay-box">
+            <h2 id="modal-winner-name" style="font-family: Bangers; font-size: 3rem; color: var(--gold);"></h2>
+            <p id="modal-funny-msg" style="font-family: Fredoka; margin: 20px 0;"></p>
+            <button id="next-round-btn" class="btn-gold">NEXT ROUND</button>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <header>
+            <h1 style="font-family: Bangers; font-size: 3rem; text-shadow: 4px 4px 0 black;">SNAP JUDGMENT</h1>
+            <p class="studio-tag">CHILLVIBEZ STUDIOS</p>
         </header>
 
-        <main class="board-layout">
-            <!-- Library / Deck -->
-            <div class="pile-container">
-                <span class="pile-label">Library</span>
-                <div class="card" id="library-card" onclick="drawFromBoard()">
-                    <div class="card-inner">
-                        <div class="card-back"></div>
-                    </div>
-                </div>
-                <p id="stats"><span id="card-count">600</span> Cards Left</p>
-            </div>
-
-            <!-- Discard Pile -->
-            <div class="pile-container">
-                <span class="pile-label">Discard Pile</span>
-                <div class="card" id="discard-card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="card-header">
-                                <span class="card-type" id="card-category">WAITING...</span>
-                                <span class="card-id" id="card-number">#000</span>
-                            </div>
-                            <div class="card-illustration">
-                                <span id="card-emoji">💤</span>
-                            </div>
-                            <div class="content-wrapper">
-                                <p id="card-text">Send a card from your phone!</p>
-                            </div>
-                            <div class="card-footer">
-                                <div class="stat-box">
-                                    <span class="stat-label">AWKWARDNESS</span>
-                                    <div class="stat-bar"><div class="stat-fill" id="stat-awkward" style="width: 0%"></div></div>
-                                </div>
-                                <p class="disclaimer">Created by Ethan Tyler Bonser & Tim Jacobson</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <main class="board-layout" id="main-board-area">
+            <p>Initializing...</p>
         </main>
 
         <footer>
-            <button id="shuffle-btn">Reset Board</button>
+            <div style="font-size: 0.5rem; color: var(--text-muted); margin-bottom: 10px;">ROOM ID: 192-168-0-153</div>
+            <button id="shuffle-btn" class="btn-red">RESET ALL</button>
         </footer>
     </div>
 
     <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
     <script src="cards.js"></script>
+    <script src="prompts.js"></script>
     <script src="sync-board.js"></script>
 </body>
 </html>

@@ -1,226 +1,111 @@
 :root {
-    --bg-color: #1a1a1a;
-    --accent-color: #4a90e2;
-    --card-bg: #2d2d2d;
-    --text-main: #eeeeee;
-    --text-dim: #aaaaaa;
-    --border-color: #444444;
+    --navy-bg: #0a192f;
+    --gold: #f1c40f;
+    --accent: #e94560;
+    --text-white: #ffffff;
+    --text-muted: #8892b0;
+    --card-frame: #112240;
+    --parchment: #f3e5ab;
+    --radius-lg: 20px;
+    --radius-md: 12px;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1a1a1a);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-    color: var(--text-main);
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--navy-bg);
+    color: var(--text-white);
+    font-family: 'Press Start 2P', cursive;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 20px 0;
+    min-height: 100dvh;
+    overflow: hidden;
     touch-action: manipulation;
-    user-select: none;
-    -webkit-user-select: none;
-    overflow-x: hidden;
 }
 
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-.game-container {
-    text-align: center;
+/* --- REUSABLE LAYOUTS --- */
+.app-container {
     width: 100%;
-    max-width: 800px;
-    padding: 20px;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1400px;
+    margin: auto;
 }
 
-.studio-name {
-    font-size: 0.9rem;
-    color: var(--accent-color);
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 5px;
-    font-weight: 700;
-}
+header { width: 100%; text-align: center; }
+footer { width: 100%; text-align: center; padding-top: 10px; }
 
-#game-title {
-    font-size: 2.2rem;
-    color: var(--text-main);
-    margin-bottom: 10px;
-}
-
-/* Card Base */
+/* --- CARD ENGINE --- */
 .card {
-    width: 160px;
-    aspect-ratio: 2 / 3;
-    cursor: pointer;
+    aspect-ratio: 2.2 / 3.2;
     perspective: 1000px;
-    position: relative;
-    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative; width: 100%; height: 100%;
+    transform-style: preserve-3d; transition: transform 0.5s steps(6);
+    will-change: transform;
 }
 
-.card.flipped .card-inner {
-    transform: rotateX(180deg);
-}
+.card.flipped .card-inner { transform: rotateX(180deg); }
 
 .card-back, .card-front {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    position: absolute; width: 100%; height: 100%;
+    backface-visibility: hidden; border: 3px solid #111;
+    outline: 2px solid var(--gold); border-radius: 10px; overflow: hidden;
 }
 
-.card-back {
-    background: #000 url('Images/Snap%20Judgement%20Back%20Card.jpg') center/contain no-repeat;
-}
+.card-back { background: #000 url('Images/Snap%20Judgement%20Back%20Card.jpg') center/contain no-repeat; }
+.card-front { background: var(--card-frame); transform: rotateX(180deg); padding: 5px; display: flex; flex-direction: column; }
 
-.card-front {
-    background: var(--card-bg);
-    transform: rotateX(180deg);
-    padding: 12px;
+/* --- CARD CONTENT --- */
+.card-header { background: linear-gradient(180deg, #631010 0%, #3a0a0a 100%); border: 1px solid var(--gold); border-radius: 8px 8px 2px 2px; padding: 3px; display: flex; justify-content: space-between; align-items: center; }
+.card-type { font-size: 0.3rem; color: var(--gold); text-transform: uppercase; }
+.card-illustration { flex: 0.8; background: #000; border-radius: 50% 50% 5% 5%; margin: 2px; display: flex; justify-content: center; align-items: center; font-size: 1.2rem; }
+.card-main-content { flex: 2.2; display: flex; gap: 4px; }
+.card-sidebar { width: 15px; display: flex; flex-direction: column; justify-content: center; gap: 4px; }
+.stat-icon { width: 12px; height: 12px; border: 1px solid var(--gold); border-radius: 50%; font-size: 0.4rem; display: flex; justify-content: center; align-items: center; background: #222; }
+.content-wrapper { flex: 1; background: var(--parchment); border: 2px solid #8b4513; border-radius: 4px; padding: 6px; display: flex; align-items: center; justify-content: center; }
+.mini-card-text { font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 0.5rem; line-height: 1.1; color: #222; text-align: center; }
+
+/* --- BOARD SPECIFIC --- */
+.board-page .board-layout { flex: 1; display: grid; grid-template-columns: 280px 1fr 280px; align-items: center; width: 100%; gap: 30px; }
+.board-page .card { height: 42vh; width: auto; margin: 0 auto; }
+.board-page .mini-card-text { font-size: 0.85rem; line-height: 1.3; }
+.player-container-box {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-/* Fanned Hand Styling */
-.player-hand {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 300px;
-    margin-top: 40px;
-    padding-bottom: 40px;
-    width: 100%;
-}
-
-.hand-card {
-    margin-left: -60px;
-    transition: all 0.3s ease;
-}
-
-.hand-card:first-child { margin-left: 0; }
-
-.hand-card:hover {
-    transform: translateY(-30px) scale(1.1);
-    z-index: 50 !important;
-}
-
-/* Focused Card View */
-#focus-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.85);
-    display: none; /* Hidden by default */
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row; /* Side-by-side */
     align-items: center;
-    z-index: 1000;
-    backdrop-filter: blur(5px);
+    gap: 20px;
 }
 
-#focused-card-slot .card {
-    width: 280px;
-    max-height: 70vh;
-}
+.side-pile { background: rgba(255,255,255,0.02); border: 3px solid var(--gold); border-radius: var(--radius-lg); padding: 15px; min-width: 180px; text-align: center; }
+.win-count { font-size: 3rem; color: var(--gold); margin: 10px 0; }
+.submission-slot { width: 100%; height: 28vh; border: 3px dashed rgba(255,255,255,0.05); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; }
 
-#focused-card-slot .card-front {
-    padding: 24px;
-}
+/* --- PLAYER SPECIFIC --- */
+.player-page .player-hand { flex: 1; display: flex; flex-wrap: wrap; justify-content: center; align-content: center; gap: 10px; max-width: 500px; }
+.player-page .card { width: 90px; height: 135px; }
+.player-page .hand-card:nth-child(1) { width: 105px; height: 155px; } /* Pyramid Top */
 
-.focus-controls {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    max-width: 300px;
-}
+/* --- OVERLAYS --- */
+.overlay-screen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 25, 47, 0.98); z-index: 5000; display: none; justify-content: center; align-items: center; padding: 20px; text-align: center; }
+.overlay-screen.active { display: flex; flex-direction: column; }
+.overlay-box { background: var(--card-frame); border: 6px solid var(--gold); border-radius: var(--radius-lg); padding: 30px; max-width: 500px; width: 95%; }
 
-/* Buttons */
-button {
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.2s;
-}
+/* --- BUTTONS --- */
+button { font-family: 'Press Start 2P', cursive; font-size: 0.6rem; padding: 12px 24px; border: 4px solid #000; background: #ecf0f1; cursor: pointer; box-shadow: -4px 4px 0 black; transition: transform 0.1s; }
+button:active { transform: translate(-2px, 2px); box-shadow: 0 0 0; }
+.btn-green { background: #2ecc71; color: white; }
+.btn-red { background: #e74c3c; color: white; }
+.btn-gold { background: var(--gold); color: black; }
 
-#send-to-pile-btn {
-    background: #27ae60;
-    color: white;
-    padding: 18px;
-    font-size: 1.1rem;
-}
-
-#close-focus-btn {
-    background: #e74c3c;
-    color: white;
-    padding: 12px;
-    font-size: 0.9rem;
-}
-
-#shuffle-btn {
-    background: var(--accent-color);
-    color: white;
-    padding: 12px 32px;
-    font-size: 1rem;
-    margin-top: 20px;
-}
-
-button:hover { opacity: 0.9; transform: scale(1.02); }
-button:active { transform: scale(0.98); }
-
-/* Card Content Details */
-.card-header { display: flex; justify-content: space-between; font-size: 0.6rem; color: var(--accent-color); border-bottom: 1px solid var(--border-color); padding-bottom: 4px; }
-.card-illustration { flex: 1; display: flex; justify-content: center; align-items: center; font-size: 2.5rem; background: rgba(0,0,0,0.2); margin: 10px 0; border-radius: 4px; }
-.content-wrapper { background: rgba(255,255,255,0.03); padding: 8px; border-radius: 4px; }
-#card-text { font-size: 0.8rem; line-height: 1.3; }
-.stat-bar { width: 100%; height: 3px; background: rgba(255,255,255,0.1); border-radius: 2px; }
-.stat-fill { height: 100%; background: var(--accent-color); border-radius: 2px; transition: width 0.8s ease; }
-.disclaimer { font-size: 0.4rem; opacity: 0.5; margin-top: 5px; }
-
-/* Large Card Overrides */
-#focused-card-slot .card-illustration { font-size: 4rem; }
-#focused-card-slot #card-text { font-size: 1.2rem; }
-#focused-card-slot .card-header { font-size: 0.8rem; }
-
-/* Board Layout Overrides */
-.board-layout { display: flex; justify-content: space-around; align-items: center; width: 100%; margin: 40px 0; }
-.board-layout .card { width: 240px; }
-
-/* Shuffle Animation */
-@keyframes shuffleEffect {
-    0% { transform: translate(0, 0) rotate(0); }
-    25% { transform: translate(-50px, -20px) rotate(-10deg); }
-    75% { transform: translate(50px, 20px) rotate(10deg); }
-    100% { transform: translate(0, 0) rotate(0); }
-}
-.shuffling { animation: shuffleEffect 0.4s ease-in-out infinite; }
+/* Animations */
+@keyframes dealCard { 0% { transform: translateY(-600px); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
+.dealing { animation: dealCard 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both; }
